@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADELEIDE — Натуральная косметика для лица и тела</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Шапка -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#/" class="logo">
+        <img src="/Res/1.jpg" alt="ADELEIDE" onerror="this.style.display='none'">
+        ADELEI<span>DE</span>
+      </a>
+      <button class="mobile-menu-btn" onclick="document.getElementById('mainNav').classList.toggle('show')">☰</button>
+      <nav class="nav-links" id="mainNav">
+        <a href="#/" class="active" data-nav="home">Главная</a>
+        <a href="#/catalog/all" data-nav="catalog">Каталог</a>
+        <a href="#/catalog/golden" data-nav="golden">Золотая серия</a>
+        <a href="#/page/about" data-nav="about">О бренде</a>
+        <a href="#/page/contacts" data-nav="contacts">Контакты</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-wrap">
+          <input type="text" class="search-input" placeholder="Поиск..." id="searchInput" onkeypress="if(event.key==='Enter') App.search()">
+          <button class="search-submit" onclick="App.search()">🔍</button>
+        </div>
+        <button class="icon-btn" id="favBtn" title="Избранное">♡<span class="badge hidden" id="favBadge">0</span></button>
+        <button class="icon-btn" id="cartBtn" title="Корзина">🛒<span class="badge hidden" id="cartBadge">0</span></button>
+        <button class="icon-btn" id="userBtn" title="Личный кабинет">👤</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Основной контент -->
+  <main class="main-content" id="app"></main>
+
+  <!-- Подвал -->
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>КАТАЛОГ</h4>
+        <a href="#/catalog/face-creams">Кремы для лица</a>
+        <a href="#/catalog/eye-creams">Кремы вокруг глаз</a>
+        <a href="#/catalog/serums">Сыворотки для лица</a>
+        <a href="#/catalog/toners">Тоники</a>
+        <a href="#/catalog/cleansing">Очищение кожи</a>
+        <a href="#/catalog/hand-creams">Кремы для рук</a>
+        <a href="#/catalog/fragrances">Ароматы</a>
+        <a href="#/catalog/sets">Наборы</a>
+      </div>
+      <div class="footer-col">
+        <h4>КОЛЛЕКЦИИ</h4>
+        <a href="#/catalog/golden">Золотая серия</a>
+        <a href="#/catalog/sun-protection">Защита от солнца</a>
+        <a href="#/catalog/problem-skin">Для проблемной кожи</a>
+        <a href="#/catalog/sensitive-skin">Для чувствительной кожи</a>
+        <a href="#/catalog/urea-series">Серия с мочевиной</a>
+        <a href="#/catalog/active-life">Для активной жизни</a>
+      </div>
+      <div class="footer-col">
+        <h4>МАРКЕТПЛЕЙСЫ</h4>
+        <a href="https://www.wildberries.ru/brands/311595617-adeleide" target="_blank">Wildberries</a>
+        <a href="https://www.letu.ru/brand/adeleide" target="_blank">ЛЭТУАЛЬ</a>
+        <a href="https://goldapple.ru/brands/adeleide" target="_blank">Золотое Яблоко</a>
+      </div>
+      <div class="footer-col">
+        <h4>ИНФОРМАЦИЯ</h4>
+        <a href="#/page/about">О бренде</a>
+        <a href="#/page/blog">Блог</a>
+        <a href="#/page/contacts">Контакты</a>
+        <a href="#/page/buyers">Информация для покупателей</a>
+        <h4 style="margin-top:14px;">РАССЫЛКА</h4>
+        <input type="email" class="newsletter-input" placeholder="Ваша почта" id="newsletterEmail">
+        <button class="newsletter-btn" onclick="App.subscribe()">Подписаться</button>
+        <p style="font-size:10px;color:var(--text-lighter);margin-top:4px;">Я даю согласие на обработку персональных данных ООО "АДЕЛЕЙД"</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 ADELEIDE. Все права защищены. | Мы запустили новый сайт, возможны небольшие ошибки.</p>
+    </div>
+  </footer>
+
+  <script src="/js/api.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/cart.js"></script>
+<script src="/js/favorites.js"></script>
+<script src="/js/catalog.js"></script>
+<script src="/js/product.js"></script>
+<script src="/js/profile.js"></script>
+<script src="/js/pages.js"></script>
+<script src="/js/admin.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>
