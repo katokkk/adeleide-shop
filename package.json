@@ -4,7 +4,7 @@
   "main": "server.js",
  "scripts": {
     "start": "node server.js",
-    "build": "npm rebuild better-sqlite3"
+    "build": "npm uninstall better-sqlite3 && npm install better-sqlite3"
   },
   "dependencies": {
     "express": "^4.18.2",
